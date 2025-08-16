@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pink Pals Memory — PWA</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#ff69b4" />
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <h1 aria-label="Pink Pals Memory Game">💖 Pink Pals Memory</h1>
+    <button id="installBtn" class="btn" aria-label="Install game">Install</button>
+  </header>
+
+  <main class="container" role="main">
+    <section class="controls" aria-label="Game controls">
+      <div class="control-row">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" aria-label="Choose difficulty">
+          <option value="easy">Easy (6 pairs)</option>
+          <option value="medium" selected>Medium (8 pairs)</option>
+          <option value="hard">Hard (10 pairs)</option>
+        </select>
+        <button id="newGameBtn" class="btn" aria-label="Start new game">New Game</button>
+      </div>
+      <div class="status-row" role="status" aria-live="polite">
+        <span>Moves: <b id="moves">0</b></span>
+        <span>Time: <b id="time">00:00</b></span>
+        <span>Best: <b id="best">—</b></span>
+        <button id="soundBtn" class="btn" aria-label="Toggle sounds">🔈</button>
+      </div>
+    </section>
+
+    <section id="grid" class="grid" aria-label="Memory card grid"></section>
+
+    <section id="winModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="winTitle" hidden>
+      <div class="modal-content">
+        <h2 id="winTitle">You did it! 🎉</h2>
+        <p id="winStats"></p>
+        <button id="playAgainBtn" class="btn">Play Again</button>
+      </div>
+    </section>
+
+    <section class="edu" aria-label="Mini lessons">
+      <h2>Kindness Quests 🌟</h2>
+      <ul>
+        <li>Give a compliment to someone today.</li>
+        <li>Help a friend or sibling with a small task.</li>
+        <li>Draw a thank-you card for someone you appreciate.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <small>Designed for ages 5–15. No ads. Works offline. 💗</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

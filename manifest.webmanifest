@@ -1,0 +1,22 @@
+{
+  "name": "Pink Pals Memory",
+  "short_name": "PinkPals",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffe4ef",
+  "theme_color": "#ff69b4",
+  "description": "A cozy, kid-friendly memory game that works offline. Ages 5\u201315.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
